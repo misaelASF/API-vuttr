@@ -1,0 +1,24 @@
+{
+  "name": "backend-vuttr",
+  "version": "1.0.0",
+  "description": "Api simples para o repositório de ferramentas",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/index.js"
+  },
+  "keywords": [
+    "Api",
+    "Repositório",
+    "Ferramentas"
+  ],
+  "author": "Misael Augusto",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
