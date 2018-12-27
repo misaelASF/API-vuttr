@@ -1,0 +1,119 @@
+FORMAT: 1A
+HOST: http://api.vuttr.com/v1
+
+# API_VUTTR
+
+Uma API simples de um repositório para ferramentas.
+
+## Tools Collection [/tools]
+
+### Listar Todas Ferramentas [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+               "tags": [
+                         {
+                            "frontend",
+                            "web",
+                            "javascript"
+                         }
+                       ],
+               "_id": "5c224ac9c6ee6032686df3a9",
+               "title": "react",
+               "link": "https://react.org",
+               "description": "biblioteca javascript",
+               "__v": 0
+            },
+            {
+               "tags": [
+                         {
+                           "web",
+                           "javascript"
+                         }
+                      ],
+               "_id": "5c77bbd3e63g33rg3rg3hr3",
+               "title": "node",
+               "link": "https://node.org",
+               "description": "interpretador de código fonte jascript.",
+               "__v": 0
+            }
+            
+        ]
+        
+
+### Criar Nova Ferramenta [POST]
+
++ Request (application/json)
+
+        {
+            "title": "sulime text",
+            "link": "https://www.sublimetext.com/",
+            "description": "editor de texto",
+            "tags": [ "texto","código" ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Accept: application/json
+
+    + Body
+
+             {
+               "tags": [
+                         {
+                            "texto",
+                            "código"
+                         }
+                      ],
+               "_id": "5c77bbd3e63g33rg3rg3hr3",
+               "title": "sublime text",
+               "link": "https://www.sublimetext.com/",
+               "description": "editor de texto",
+               "__v": 0
+            }
+
+## Tools Collection [/tools/{id_tool}]
+
+
+### Apagar Ferramenta Pelo ID [DELETE]
+
++ Request (application/json)
+
++ Parameters
+
+     + id_tool: 5c77bbd3e63g33rg3rg3hr3 (number, required) - ID da ferramenta
+
++ Response 200 (application/json)
+
+       + Attributes ([])
+       
+## Tools Collection [/api/tools?{tag_tool}]
+
+### Listar Ferramentas Pela Tag [GET]
+
++ Request (application/json)
+
++ Parameters
+
+    + tag_tool: frontend (string, required) - Tag da ferramenta.
+    
++ Response 200 (application/json)
+
+            {
+               "tags": [
+                         {
+                            "frontend",
+                            "web",
+                            "javascript"
+                         }
+                       ],
+               "_id": "5c224ac9c6ee6032686df3a9",
+               "title": "react",
+               "link": "https://react.org",
+               "description": "biblioteca javascript",
+               "__v": 0
+            }
