@@ -11,7 +11,7 @@ app.listen(port);
 console.log(`API rodando na porta: ${port}.`);
 
 const route = require('./routes/index');
-const routeTags = require('./routes/tags');
+const user = require('./routes/user');
 
 app.use('/', route);
-app.use('/api', routeTags);
+app.use('/', user);

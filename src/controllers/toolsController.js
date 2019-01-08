@@ -14,11 +14,17 @@ exports.post = async (req, res) => {
 };
 
 exports.get = async (req, res) => {
+      const consulta = req.query.tag;
 
      try {
-            await Tool.find(req.params)
-                      .then(data => { res.status(200).send(data) });
-
+           if(!consulta) {
+                 await Tool.find(req.params)
+                           .then(data => { res.status(200).send(data) });
+           } else {
+                 await Tool.find({ tags: consulta })
+                           .then(data => { res.status(200).send(data) });
+           }
+            
      } catch (msg) {
 
            res.status(400).send(msg);
