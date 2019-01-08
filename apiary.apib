@@ -117,3 +117,22 @@ Uma API simples de um repositório para ferramentas.
                "description": "biblioteca javascript",
                "__v": 0
             }
+
+## User Collection [/user]
+
+### Criar um novo usuario [POST]
+
++ Request (application/json)
+     
+     {
+          "name": "teste",
+          "password": "131131"
+     }
+
++ Response 200 (application/json)
+
+     {
+        "_id": "5c224ac9c6ee6032686df3a9",
+        "name": "teste",
+        "password": "131131"
+     }

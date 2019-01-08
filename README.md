@@ -23,3 +23,5 @@ Está API contém as seguintes rotas:
 * POST /tools : cria uma nova ferramenta.  
 * DELETE /tools/:id : selecionar uma ferramenta pelo id e a apaga.
 * GET /api/tools : lista todas as ferramentas pela tag.
+* POST /user : criar um novo usuario.
+* POST /generate : criar um token para a autenticação.
